@@ -30,14 +30,12 @@
   <ItemGroup>
     <Compile Include="AclLib.ps1" />
     <Compile Include="DBLib.ps1" />
-    <Compile Include="dnn.installer.config" />
     <Compile Include="DnnLib.ps1" />
     <Compile Include="ielib.ps1" />
     <Compile Include="IISLib.ps1" />
     <Compile Include="initialize.ps1" />
     <Compile Include="Install-DNN.ps1" />
     <Compile Include="load-config.ps1" />
-    <Compile Include="Script.ps1" />
     <Compile Include="ZipLib.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
