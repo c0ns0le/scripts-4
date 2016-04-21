@@ -30,7 +30,7 @@ else if GetKeyState("Shift", "P")
 }
 else
 {
-	SendInput, %clipboard%
+	SendRaw, %clipboard%
 }
 return
 ;
