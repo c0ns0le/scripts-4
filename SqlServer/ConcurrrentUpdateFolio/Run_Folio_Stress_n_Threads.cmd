@@ -1,0 +1,12 @@
+@ECHO OFF
+SETLOCAL
+SET THREADS=100
+SET FOLIOS_PER_THREAD=500
+
+
+ECHO Inicio Invocacion: %TIME%
+FOR /L %%i IN (1, 1, %THREADS%) DO START sqlcmd -S .\SQLEXPRESS -E -d Folio_InMemory -Q "EXEC Folio_Stress %FOLIOS_PER_THREAD%"
+ECHO Fin invocando %THREADS% hilos: %TIME%
+
+REM PAUSE
+ENDLOCAL
