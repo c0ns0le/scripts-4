@@ -27,11 +27,7 @@ namespace QueueReaderConsole
 
             //int maxParallelThreads = Math.Max(Environment.ProcessorCount, 8);
             int maxParallelThreads = 10;
-            try
-            {
-                if (args != null && args.Length > 0)
-                { maxParallelThreads = Math.Max(maxParallelThreads, Convert.ToInt32(args[0])); }
-            }
+            try { if (args != null && args.Length > 0) { maxParallelThreads = Math.Max(maxParallelThreads, Convert.ToInt32(args[0])); } }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
 
             Console.WriteLine("Threads: {0}", maxParallelThreads);
@@ -100,7 +96,10 @@ namespace QueueReaderConsole
                 while (!_Cancel)
                 {
                     var message = _Queue.GetMessage();
-                    if (message != null)
+                    if (message == null) {
+                        Thread.Sleep(millisecondsTimeout: 1000);
+                    }
+                    else
                     {
                         var processingTime = _Random.Next(4000, 10000);
                         Thread.Sleep(millisecondsTimeout: processingTime);

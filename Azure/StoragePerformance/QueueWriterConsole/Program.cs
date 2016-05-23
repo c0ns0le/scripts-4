@@ -12,11 +12,12 @@ namespace QueueWriterConsole
     class Program
     {
         private static volatile bool _Cancel = false;
+        private static int _MaxMessageCount;
         private static volatile int _MessageCount;
         private static CloudQueue _Queue;
         private static Stopwatch _Watch;
 
-        
+
         public static void Main(string[] args)
         {
             QueueInit();
@@ -24,11 +25,12 @@ namespace QueueWriterConsole
 
             //int maxParallelThreads = Math.Max(Environment.ProcessorCount, 8);
             int maxParallelThreads = 10;
-            try
-            {
-                Math.Max(maxParallelThreads, Convert.ToInt32(args == null || args.Length == 0 ? "0" : args[0]));
-            }
+            try { if (args != null && args.Length >= 1) { maxParallelThreads = Math.Max(maxParallelThreads, Convert.ToInt32(args[0])); } }
             catch (Exception ex) { Console.WriteLine(ex.Message); }
+            _MaxMessageCount = 1000000;
+            try { if (args != null && args.Length >= 2) { _MaxMessageCount = Convert.ToInt32(args[1]); } }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+
 
             List<Thread> threads = new List<Thread>();
             for (var i = 0; i < maxParallelThreads; i++)
