@@ -79,7 +79,6 @@ namespace WebJobMultiThreaded
         }
         #endregion Run Threads
 
-
         #region Profiler
         private const int REPORT_REFRESH_RATE_MSEC = 1000;
         private static Stopwatch _Watch;
