@@ -1,0 +1,10 @@
+@ECHO OFF
+SETLOCAL
+PUSHD "%~dp0"
+
+ECHO Borrando MKLINK "Packages"
+IF EXIST Packages RMDIR Packages
+
+POPD
+ENDLOCAL
+PAUSE
