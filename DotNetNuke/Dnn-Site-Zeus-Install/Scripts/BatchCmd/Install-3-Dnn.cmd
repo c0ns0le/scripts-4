@@ -13,6 +13,12 @@ SET BASEDIR=%USERPROFILE%\Documents\GitHub\scripts\DotNetNuke\Dnn-Site-Zeus-Inst
 SET INSTALL_SCRIPT_FOLDER=%BASEDIR%\Scripts\Powershell
 SET DNN_DB_SERVER=%COMPUTERNAME%\SQLExpress
 
+REM local
+SET BASEDIR=C:\TFS\Zeus\Comun\Setup.Dnn\Zeus.Dnn.Setup.Component
+SET INSTALL_SCRIPT_FOLDER=%BASEDIR%\Scripts\Powershell
+SET DNN_DB_SERVER=%COMPUTERNAME%\SQL2014
+
+
 %PS% "%INSTALL_SCRIPT_FOLDER%\%~n0.ps1" ^
   -DnnRootUrl "http://hotel-portal.dnndev.me" ^
   -DnnUsername "host" ^

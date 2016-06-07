@@ -22,25 +22,6 @@ SET DNN_EXTRA_MODULES=%USERPROFILE%\Documents\GitHub\scripts\DotNetNuke\Dnn-Site
 SET INSTALL_SCRIPT_FOLDER=%BASEDIR%\Scripts\Powershell
 
 
-%PS% "%INSTALL_SCRIPT_FOLDER%\%~n0.ps1" ^
-  -DnnInstallZip "%DNN_ZIP%" ^
-  -Destination "C:\Zeus Software\web" ^
-  -ExtraModulesFolder "%DNN_EXTRA_MODULES_FOLDER%" ^
-  -AppPoolName "zeusweb" ^
-  -AppPoolUserName "temphost" ^
-  -AppPoolPassword 'abc123$' ^
-  -AppPoolEnable32BitAppOnWin64 1 ^
-  -SiteName "hotel-portal.dnndev.me" ^
-  -SiteAlias "portal.dnndev.me" ^
-  -SitePort 80 ^
-  -MaxRequestMB 100 ^
-  -RuntimeExecutionTimeout 1200 ^
-  -RuntimeRequestLengthDiskThreshold 90000 ^
-  -RuntimeMaxUrlLength 5000 ^
-  -RuntimeRelaxedUrlToFileSystemMapping "true" ^
-  -RuntimeMaxQueryStringLength 50000 ^
-  -ProviderEnablePasswordRetrieval "true" ^
-  -ProviderMinRequiredPasswordLength 6 ^
-  -ProviderPasswordFormat "Encrypted"
+%PS% "%INSTALL_SCRIPT_FOLDER%\%~n0.ps1"
 
 ENDLOCAL
