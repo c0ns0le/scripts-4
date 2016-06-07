@@ -13,7 +13,7 @@ $ErrorActionPreference = "Stop" # Set Error Action to Stop
 $Script:ScriptVersion = "1.0"   # Script Version
 
 #-----------------------------------------------------------[Compatibility]------------------------------------------------------------
-if (!$Script:PSScriptRoot) { $Script:PSScriptRoot = Split-Path $MyInvocation.MyCommand.Definition -Parent } # PS 2.0 compatibility
+if ($PSVersionTable.PSVersion.Major -le 2) { $PSScriptRoot = Split-Path $MyInvocation.MyCommand.Definition -Parent } # powershell 2.0
 
 
 #-----------------------------------------------------------[Functions]------------------------------------------------------------
