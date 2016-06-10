@@ -1,0 +1,37 @@
+﻿VERSION BUILD=8031994
+TAB T=1
+TAB CLOSEALLOTHERS
+'
+'Press LOOP to start this macro
+'
+'Remove the URL command to make this
+' an UNIVERSAL *Download* Macro! 
+'
+'
+
+URL GOTO=http://demo.imacros.net/Automate/Images 
+'You can *start* the loop at another value with SET !LOOP. The default start value is 1. 
+'Since the SET !LOOP command sets a START value, it works only at the first loop.
+'SET !LOOP 2
+TAG POS={{!loop}} TYPE=IMG ATTR=HREF:http://*.jpg  
+'
+'You can use the FOLDER=* part of the ONDOWNLOAD command to define another download directory
+'And you can overwrite the automatic file name generation by replacing
+'FILE=+_{{!NOW:yyyymmdd_hhnnss}}  
+'with 
+'FILE=yourname.ext 
+'
+'
+ONDOWNLOAD FOLDER=* FILE=+_image_{{!NOW:yyyymmdd_hhnnss}}  
+'
+'Download the picture
+TAG POS=1 TYPE=IMG ATTR=HREF:http://*.jpg CONTENT=EVENT:SAVEITEM
+'
+'You can also use the EVENT:SAVE_ELEMENT_SCREENSHOT command instead
+'TAG POS=1 TYPE=IMG ATTR=HREF:http://*.jpg CONTENT=EVENT:SAVE_ELEMENT_SCREENSHOT 
+'
+'Or you can take a snapshot of the complete web page
+'SAVEAS TYPE=BMP FOLDER=* FILE=MySnapshot_{{!NOW:yyyymmdd_hhnnss}}.bmp 
+'
+'Give the user time to press PAUSE 
+WAIT SECONDS=3

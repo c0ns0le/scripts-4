@@ -1,0 +1,23 @@
+﻿VERSION BUILD=8031994
+TAB T=1
+TAB CLOSEALLOTHERS
+URL GOTO=http://demo.imacros.net/Automate/Downloads
+'    
+'You can use the FOLDER=* part of the ONDOWNLOAD command to define another download directory 
+'And you can overwrite the automatic file name generation by replacing
+'FILE=+_{{!NOW:yyyymmdd_hhnnss}}  
+'with 
+'FILE=yourname (The correct file extension is added automatically)
+'For more information visit http://wiki.imacros.net/ONDOWNLOAD
+'
+'For IE9/IE10 users, one has to change a setting not to prompt to open attached/downloaded zip files. 
+'One has to first download by hand such a file, then open the downloads view (Ctrl+J), 
+'right-click on the zip file to retrieve its context menu and 
+'disable "Always ask before opening this type of file"
+'
+'Here starts the regular download macro
+'
+ONDOWNLOAD FOLDER=* FILE=* WAIT=YES
+TAG POS=2 TYPE=A ATTR=TXT:*Download*
+WAIT SECONDS=6
+URL GOTO=http://demo.imacros.net/Automate/OK 

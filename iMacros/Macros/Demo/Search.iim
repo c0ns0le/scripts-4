@@ -1,0 +1,14 @@
+﻿VERSION BUILD=8031994
+TAB T=1
+'
+URL GOTO=http://imacros.net/
+'Check for Script
+SEARCH SOURCE=TXT:"ga('create', 'UA-3533195-21', 'imacros.net');"
+SEARCH SOURCE=TXT:"'UA-3533195-21'"
+'Check for Script, ignore case
+SEARCH SOURCE=TXT:"widget widget_text" IGNORE_CASE=YES
+'Use regular expression to extract data
+SEARCH SOURCE=REGEXP:"ga\\(([^)]+)\\)" EXTRACT="Tracker is $1"
+'SEARCH SOURCE=REGEXP:"ga\\(\'[^\']+\'\,\\s*(\'[^\']+\')\,\\s*\'[^\']+\'\\)\;" EXTRACT="Tracker is $1"
+'Display extracted data
+PROMPT {{!EXTRACT}}

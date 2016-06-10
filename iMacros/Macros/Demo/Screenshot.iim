@@ -1,0 +1,8 @@
+﻿VERSION BUILD=9012526
+TAB T=1     
+TAB CLOSEALLOTHERS
+'Use the SCREENSHOT command with TYPE=PAGE to save a screenshot of the complete web page     
+SCREENSHOT TYPE=PAGE FOLDER=* FILE=Page_{{!NOW:yyyymmdd_hhnnss}}.png
+'The same command with TYPE=BROWSER makes a screenshot of the browser window
+SCREENSHOT TYPE=BROWSER FOLDER=* FILE=Browser_{{!NOW:yyyymmdd_hhnnss}}.png
+URL GOTO=http://demo.imacros.net/Automate/Screenshot

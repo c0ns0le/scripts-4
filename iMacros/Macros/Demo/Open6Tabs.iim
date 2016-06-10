@@ -1,0 +1,37 @@
+﻿VERSION BUILD=8031994
+TAB T=1
+TAB CLOSEALLOTHERS
+'Important: IE window should be wide enough for all tab buttons to be visible
+SIZE X=1280 Y=768
+SET !VAR1 1
+'Start at TAB T=2, as we do not want to change "start" tab of user
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://www.iopus.com
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://forum.iopus.com
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://www.youtube.com
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://www.cnn.com
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://www.heise.de
+'Open TAB, select it, load website
+TAB OPEN 
+ADD !VAR1 1
+TAB T={{!VAR1}}
+URL GOTO=http://yahoo.com

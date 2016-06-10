@@ -1,0 +1,14 @@
+VERSION BUILD=7500718
+TAB T=1
+'
+'In Internet Explorer, to detect script errors using CONTINUE=NO, the option 
+'"Display a notification about every script error" 
+'(Internet Options, Advanced tab, under Browsing) should be checked. 
+'For more information visit http://wiki.imacros.net/ONERRORDIALOG
+'
+ONSCRIPTERROR BUTTON=YES CONTINUE=NO
+URL GOTO=http://demo.imacros.net/Automate/ScriptError
+'This Javascript works fine
+TAG POS=1 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:country CONTENT=%Peso
+'The Javascript behind the second dropdown  has a built-in syntax error for testing
+TAG POS=2 TYPE=SELECT FORM=NAME:NoFormName ATTR=NAME:country CONTENT=%Canadian<SP>Dollars

@@ -1,0 +1,7 @@
+VERSION BUILD=8031994
+TAB T=1     
+TAB CLOSEALLOTHERS     
+URL GOTO=file:///C:\Users\PEscobar\Documents\GitHub\scripts\iMacros\Datasources/offline/extract_local.htm     
+TAG POS=29 TYPE=TD ATTR=TXT:*.* EXTRACT=TXT  
+TAG POS=30 TYPE=TD ATTR=TXT:*.* EXTRACT=TXT   
+SAVEAS TYPE=EXTRACT FOLDER=* FILE=mytest_{{!NOW:yymmdd_hhmmss}}.csv

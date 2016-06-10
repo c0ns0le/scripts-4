@@ -1,0 +1,7 @@
+﻿VERSION BUILD=8031994
+TAB T=1
+TAB CLOSEALLOTHERS
+URL GOTO=http://demo.imacros.net/Automate/Extract2
+TAG POS=1 TYPE=TD ATTR=CLASS:bdytxt&&TXT:* EXTRACT=TXT
+' save extraction to clipboard
+SET !clipboard {{!EXTRACT}}

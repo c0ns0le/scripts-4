@@ -1,0 +1,10 @@
+﻿VERSION BUILD=8031994
+URL GOTO=http://demo.imacros.net/Automate/Print       
+TAG POS=1 TYPE=A ATTR=HREF:http://demo.imacros.net/Automate/PrintWarning   
+WAIT SECONDS=5     
+BACK
+'print browser page  
+ONPRINT P=*     
+PRINT             
+WAIT SECONDS=3
+URL GOTO=http://demo.imacros.net/Automate/OK

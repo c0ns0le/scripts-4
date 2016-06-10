@@ -1,0 +1,14 @@
+﻿VERSION BUILD=8031994   
+TAB T=1     
+TAB CLOSEALLOTHERS     
+URL GOTO=http://demo.imacros.net/Automate/HtmlDialogs
+ONWEBPAGEDIALOG KEYS={down<SP>2}{tab<SP>1}{enter}     
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Launch<SP>Modal<SP>Window  
+WAIT SECONDS=5    
+BACK      
+ONWEBPAGEDIALOG KEYS={down<SP>3}{tab<SP>1}{enter}     
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Launch<SP>Modeless<SP>Window  
+WAIT SECONDS=5     
+BACK      
+ONWEBPAGEDIALOG KEYS={close}     
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Load<SP>Modal<SP>Window  

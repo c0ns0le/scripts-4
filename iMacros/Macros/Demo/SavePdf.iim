@@ -1,0 +1,31 @@
+﻿VERSION BUILD=10.3.27.2745
+TAB T=1     
+URL GOTO=http://demo.imacros.net/Automate/PDFDemo
+'
+WAIT SECONDS=2
+'
+'1st Download (small file)
+' 
+ONDOWNLOAD FOLDER=* FILE=+_{{!NOW:yyyymmdd_hhnnss}} WAIT=YES
+'The tag command below triggers a download  or opens the PDF file
+'in the browser, if Adobe Acrobat Reader® is installed.
+TAG POS=1 TYPE=A ATTR=TXT:*View<SP>small<SP>PDF<SP>Document*
+'When the PDF file is open in the browser, use SAVEITEM to download it
+'If Adobe Acrobat Reader® is not set to open PDF files in the browser, 
+'the download happens with the command above, in this case you should 
+'comment the line below
+SAVEITEM   
+'
+'2nd Download (same as #1 but larger file)
+' 
+URL GOTO=http://demo.imacros.net/Automate/PDFDemo
+ONDOWNLOAD FOLDER=* FILE=+_{{!NOW:yyyymmdd_hhnnss}} WAIT=YES
+TAG POS=1 TYPE=A ATTR=TXT:*View<SP>iMacros<SP>Case<SP>Study*
+'If Adobe Acrobat Reader® is not set to open PDF files in the browser, 
+'the download happens with the command above, in this case you should 
+'comment the line below
+SAVEITEM
+'
+'
+WAIT SECONDS=3
+URL GOTO=http://demo.imacros.net/Automate/OK

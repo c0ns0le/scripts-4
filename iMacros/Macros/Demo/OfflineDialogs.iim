@@ -1,0 +1,20 @@
+VERSION BUILD=8031994
+'Uses a Windows script to submit several datasets to a website, e. g. for filling an online database
+TAB T=1     
+TAB CLOSEALLOTHERS  
+'Use EXTRACTDIALOG if you want to extract the text on the dialogs
+'SET !EXTRACTDIALOG YES
+URL GOTO=file:///C:\Users\PEscobar\Documents\GitHub\scripts\iMacros\Datasources/offline/javascript_local.htm       
+SET !REPLAYSPEED SLOW
+ONDIALOG POS=1 BUTTON=OK CONTENT=   
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Popup<SP>1  
+ONDIALOG POS=1 BUTTON=OK CONTENT=   
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Ask<SP>me<SP>a<SP>question  
+ONDIALOG POS=1 BUTTON=OK CONTENT=pink  
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=NAME:btnPrompt&&VALUE:Enter<SP>background<SP>color  
+ONDIALOG POS=1 BUTTON=OK CONTENT=   
+ONDIALOG POS=2 BUTTON=OK CONTENT=aqua   
+ONDIALOG POS=3 BUTTON=OK CONTENT=   
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=NAME:btnTest&&VALUE:Three-step<SP>background<SP>color<SP>change  
+WAIT SECONDS=3     
+TAG POS=1 TYPE=INPUT:BUTTON FORM=NAME:NoFormName ATTR=VALUE:Change<SP>background<SP>back<SP>to<SP>white  

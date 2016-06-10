@@ -1,0 +1,230 @@
+﻿<html>
+
+<head>
+<title>iMacros - Local Test Page</title>
+
+<style fprolloverstyle>A:hover {color: #FF0000}
+</style>
+
+<SCRIPT LANGAUAGE="javascript"> 
+function my_conFirm() {
+if (confirm("Do you want to change the background of this page to yellow?") ) 
+{
+backc ("yellow");
+}
+}
+
+function backc(clr) {
+document.bgColor = clr
+}
+</SCRIPT> 
+
+<SCRIPT language=VBScript>
+Sub btnPrompt_onClick
+Dim retValue
+retValue = Prompt("Enter the color value", "Aqua")
+backc(retValue)
+End Sub    
+
+Sub btnTest_onClick
+Dim retValue
+retValue = alert("Change the page color:" + Vbcrlf+ Vbcrlf+"In the next dialog, you can enter either the color name (e. g. red) or the color code (e. g. ccff99)." + Vbcrlf+ Vbcrlf+"Press OK to continue")
+retValue = Prompt("Enter the color value", "green")
+backc(retValue)
+
+retValue =confirm("Click [OK] to keep this color, or press [Cancel] to change it to white.")
+
+if retValue = 0 then 
+backc("white")
+end if
+
+End Sub    
+
+</SCRIPT>
+
+</head>
+
+<body bgcolor="white" >
+
+    <p align="center"><b><font face="Verdana" color="#FFCC00" size="5">iMacros</font></b></p>
+
+    <p align="center"><font face="Verdana" size="2"><b>Local Test Page</b></font></p>
+    <blockquote>
+      <p align="left"><font face="Verdana" size="2">This page is the local version of the ONDIALOG iMacros
+    Test Page. It demonstrates that iMacros can <b>automate all browser based
+      activities</b>, regardless if they are online and offline. For example,
+      you can automate tasks inside your companies Intranet
+    or fill-out a HTML based router configuration dialog on your local PC.&nbsp;</font></p>
+    <p align="left"><font face="Verdana" size="2">If you work on a PC without Internet
+    connection, it is
+    recommended that you <b> check the box &quot;Work Offline&quot; in
+    the Options dialog</b>. This avoids the Internet connection check at Internet
+    Macros startup.</font>
+      <p align="left"><font face="Verdana" size="2">If you are using Windows XP
+      with Service Pack 2 and if you use this page inside of Internet Explorer
+      you need to <a href="http://www.iopus.com/guides/xp-sp2-ie-blocked-content.htm">allow
+      active content for this page</a> in order to run the demo macro correctly.
+      Or you simply run the macro inside of the stand-alone iMacros
+      Browser (recommended).</font>
+    </blockquote>
+    <p align="center">&nbsp;
+    <div align="center">
+      <center>
+      <table border="0" width="80%" bgcolor="#CCCCCC">
+        <tr>
+          <td width="10%">
+          </center>
+
+
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2"><b>
+
+
+<INPUT TYPE="button" VALUE="Popup 1" 
+onClick='alert("Popup 1")'>&nbsp;&nbsp;</b></font>
+
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2"> Standard dialog box</font>
+
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2"><b><INPUT TYPE="button" VALUE="Ask me a question" onClick='my_conFirm()'>  &nbsp; </b></font>
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2">  Confirmation dialog box</font>
+</td>
+        </tr>
+        <tr>          <td width="10%">
+   </td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;</td>
+          <td width="45%">
+    <font face="Verdana" size="2">
+    <INPUT TYPE="BUTTON" NAME="btnPrompt" VALUE="Enter background color"> &nbsp;</font>
+</td>
+          <td width="45%">
+    <font face="Verdana" size="2">Prompt dialog box&nbsp;</font>
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2">
+      <INPUT TYPE="BUTTON" NAME="btnTest" VALUE="Three-step background color change">
+      &nbsp;</font>
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2">&quot;POS=&quot; attribute example</font>
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      <font face="Verdana" size="2">
+      <input type="button" value="Change background back to white" onclick="backc('white')"> 
+      &nbsp;</font>
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+        <tr>
+          <td width="10%">
+          &nbsp;
+
+
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+          <td width="45%">
+      &nbsp;
+</td>
+        </tr>
+      </table>
+
+    </div>
+    &nbsp;<p align="left">&nbsp;</p>
+
+</body>
+</html>
